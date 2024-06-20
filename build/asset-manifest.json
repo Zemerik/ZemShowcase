@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.efa7747a.css",
+    "main.js": "/static/js/main.81ed505f.js",
+    "static/media/about_image.jpg": "/static/media/about_image.628c90dab9adb91c295c.jpg",
+    "static/media/element-compare.png": "/static/media/element-compare.628db45a1ca6bd5c3619.png",
+    "static/media/ts-paginated-users-page.png": "/static/media/ts-paginated-users-page.9a7a86e995c4c47be746.png",
+    "static/media/wsb-tickers.png": "/static/media/wsb-tickers.a972732f4173b3c8f2b1.png",
+    "static/media/BookStackr.png": "/static/media/BookStackr.24ea6024c7cb0ad980a7.png",
+    "static/media/SimpleJavaScriptProjects.png": "/static/media/SimpleJavaScriptProjects.574c1381da241750b5ba.png",
+    "static/media/DejaVu.png": "/static/media/DejaVu.2dff6d862ff97cfdfb8d.png",
+    "static/media/money-mapper.png": "/static/media/money-mapper.886e0baf6b4aa51c56f2.png",
+    "static/media/coincaps.png": "/static/media/coincaps.9b9fcc07f92bbba15875.png",
+    "static/media/koronkorko.png": "/static/media/koronkorko.5d1519b61e28cc96a7ed.png",
+    "static/media/Alien_Invasion.png": "/static/media/Alien_Invasion.90b3c78ed5934bb7fc81.png",
+    "static/media/koronkorko-remastered.png": "/static/media/koronkorko-remastered.24507cc6269723b95bd3.png",
+    "static/media/CS-GO_weapons.png": "/static/media/CS-GO_weapons.6029279530165a1f5a0e.png",
+    "static/media/Polish_Cow.png": "/static/media/Polish_Cow.92bd8066fcf656262405.png",
+    "static/media/react-redux-toolkit-hello-world.png": "/static/media/react-redux-toolkit-hello-world.481944ec9f496d08fb0e.png",
+    "static/media/goal-trackr.png": "/static/media/goal-trackr.ec963fc06e5c7cbd210b.png",
+    "static/media/project_bg.jpg": "/static/media/project_bg.5dbe6acae950fcc9aa8d.jpg",
+    "static/media/ig-quote-image-generator.png": "/static/media/ig-quote-image-generator.9af8edb72e62456c4410.png",
+    "static/media/ts-multi-page-form.png": "/static/media/ts-multi-page-form.1172dbd35ccad9f7d6ff.png",
+    "static/media/omar-kraidié-cv.pdf": "/static/media/omar-kraidié-cv.09d8477ec5d4cddbf9e3.pdf",
+    "static/media/viewport-select.png": "/static/media/viewport-select.e62b4c9d02b204e098e3.png",
+    "index.html": "/index.html",
+    "main.efa7747a.css.map": "/static/css/main.efa7747a.css.map",
+    "main.81ed505f.js.map": "/static/js/main.81ed505f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efa7747a.css",
+    "static/js/main.81ed505f.js"
+  ]
+}
