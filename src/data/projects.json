@@ -1,0 +1,19 @@
+[
+	{
+		"title": "ZemProfiles",
+		"technologies": ["JavaScript", "TypeScript", "React.js", "Vercel", "css3"],
+		"liveUrl": "https://zemprofiles.vercel.app",
+		"codeUrl": "https://github.com/Zemerik/ZemProfiles",
+		"info": 
+		"ZemProfiles stands as an open-source platform, providing users with the opportunity to connect seamlessly with fellow developers. This connectivity is fostered through the simple act of adding one's Profile to the platform, thus creating a digital hub where like-minded individuals can engage, collaborate, and share insights within the expansive realm of software development. With its user-friendly interface and inclusive community ethos, ZemProfiles serves as a dynamic space where connections are forged, ideas are exchanged, and innovation thrives.",
+		"repositoryName": "ZemProfiles"
+	},
+	{
+		"title": "Sports Stadium",
+		"technologies": ["JavaScript", "Boostrap", "Node.js", "github"],
+		"liveUrl": "https://zemerik.is-a.dev/Sports-Stadium",
+		"codeUrl": "https://github.com/Zemerik/Sports-Stadium",
+		"info": "Sports Stadium is a discord bot made with JavaScript, specifically NodeJS. The bot was originally made to manage Stadium, however numerous servers have added the bot. Sports Stadium is a fully modular bot, meaning that users can enable/disable any commands. The main features that the bot covers are: Developer; Economy; Fun; General; Moderation. There are 8 to 15 commands in each of those Categories.The bot used a MongoDB Database for the economy commands and is currently in the process of being verified.",
+		"repositoryName": "SportsStadium"
+	}
+]
