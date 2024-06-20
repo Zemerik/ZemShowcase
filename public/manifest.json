@@ -1,0 +1,30 @@
+{
+  "short_name": "ZemShowcase",
+  "name": "ZemShowcase",
+  "icons": [
+    {
+      "src": "static/logo.png",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#a187c4",
+  "background_color": "#fafafa"
+}
