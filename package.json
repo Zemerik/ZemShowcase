@@ -1,6 +1,6 @@
 {
 	"homepage": "https://zemprofiles.vercel.app",
-	"name": "react-portfolio",
+	"name": "zemshowcase",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {

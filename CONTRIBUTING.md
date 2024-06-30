@@ -22,6 +22,41 @@
   <img src = "public/Screenshot.png">
 </p>
 
+## 🏃‍♂️ Locally Running:
+
+- This project can be locally executed on your machine in 4 simple steps!
+
+> [!Tip]
+> [NodeJS](https://nodejs.org/) needs to be installed on your machine. 
+
+
+1. Make a `Copy` of this Repository on your machine by using the following `git command` in your terminal:
+
+```
+git clone https://github.com/Zemerik/ZemShowcase
+```
+
+2. `Navigate` into the Project's `directory` by entering the following `command` in your terminal:
+
+```
+cd ZemShowcase
+```
+
+3. `Install` the required `Dependencies` by using `NPM`:
+
+```nodejs
+npm i
+```
+
+4. Start the `Development Server` through the following `command`:
+
+```nodejs
+npm start
+```
+
+> You should now be able to see the outcome on `localhost:3000`
+
+
 ## ➕ Adding your Project:
 
 1. Fork a copy of this Repository on your Github account by clicking below,
