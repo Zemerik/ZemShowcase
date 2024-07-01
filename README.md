@@ -22,7 +22,16 @@
   <img src = "public/Screenshot.png">
 </p>
 
-## ❗About:
+## 👍 Table of Contents:
+
+- [❗ About](https://github.com/Zemerik/ZemShowcase?tab=readme-ov-file#about)
+- [⭐ Features](https://github.com/Zemerik/ZemShowcase?tab=readme-ov-file#-features)
+- [🏃‍♂️ Locally Running](https://github.com/Zemerik/ZemShowcase?tab=readme-ov-file#%EF%B8%8F-locally-running)
+- [🤝 Contributing](https://github.com/Zemerik/ZemShowcase?tab=readme-ov-file#-contributing)
+- [💁 Support](https://github.com/Zemerik/ZemShowcase?tab=readme-ov-file#-support)
+- [🥳 Contributors](https://github.com/Zemerik/ZemShowcase?tab=readme-ov-file#-contributors)
+
+## ❗ About:
 
 ZemShowcase stands as an open-source platform, providing users with the opportunity to exhibit their projects seamlessly to fellow developers. This exhibition is fostered through the simple act of adding one's Project to the platform, thus creating a digital hub where like-minded individuals can engage, collaborate, and share insights within the expansive realm of software development. With its user-friendly interface and inclusive community ethos, ZemShowcase serves as a dynamic space where projects are highlighted, ideas are exchanged, and innovation thrives.
 
