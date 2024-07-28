@@ -1,6 +1,6 @@
 <p align = "center">
 
-<img src = "public/favicon.ico" style = "height:250px;width:250px">
+<img src = "public/logo.png" style = "height:250px;width:250px">
 
 <br>
 
@@ -22,94 +22,93 @@
   <img src = "public/Screenshot.png">
 </p>
 
-## 🏃‍♂️ Locally Running:
-
-- This project can be locally executed on your machine in 4 simple steps!
-
-> [!Tip]
-> [NodeJS](https://nodejs.org/) needs to be installed on your machine. 
-
-
-1. Make a `Copy` of this Repository on your machine by using the following `git command` in your terminal:
-
-```
-git clone https://github.com/Zemerik/ZemShowcase
-```
-
-2. `Navigate` into the Project's `directory` by entering the following `command` in your terminal:
-
-```
-cd ZemShowcase
-```
-
-3. `Install` the required `Dependencies` by using `NPM`:
-
-```nodejs
-npm i
-```
-
-4. Start the `Development Server` through the following `command`:
-
-```nodejs
-npm start
-```
-
-> You should now be able to see the outcome on `localhost:3000`
-
-
 ## ➕ Adding your Project:
 
 1. Fork a copy of this Repository on your Github account by clicking below,
 
 - [Fork](https://github.com/Zemerik/ZemShowcase/fork)
 
-2. Head over to your **Forked** Repository, and locate the `src/images/projects` directory. Upload the `Logo/Thumbnail` of your project and name the file the **Name of your Project**. 
+2. Clone your Forked Repository by using the following `GIT` command:
 
-3. Locate `src/data/projects.json` file and paste the following Code Snippet
-
-> [!Warning]
-> Don't add this before line 10!
-
-```json
-{
-  "title": "Name / Title of Your Project",
-  "technologies": ["Tool 1", "Tool 2", "..."],
-  "liveUrl": "Link to the Website of your Project",
-  "codeUrl": "Link to the Git Repository of your Project",
-  "info": "A Brief overview of your Project",
-  "repositoryName": "Name of your Project"
-},
+```bash
+git clone https://github.com/[YOUR GITHUB USERNAME]/ZemShowcase.git
 ```
 
->[!Note]
-> Remeber the value of `repositoryName` as it will be required in the next step
+3. Navigate into the Project's `Directory` by using the command below:
 
-> [!Tip]
-> If your project does not have a Website, add the link to the Git Repository. 
-
-4. After **saving** the file, head over to the `project-thumbnails.js` file in the `src/data` directory,
-
-- Add this at the top of the File:
-
-```js
-import [Name of your Project] from "../images/projects/[File name]"
+```bash
+cd ZemShowcase
 ```
 
-- Add this on line `5`:
+4. Initialize a Remote to the original Repository by the following `GIT` command:
 
-> [!Warning]
-> Ensure that the `[Name of your Project]` in the code below matches the `[Name of your Project]` at the top of the file
-
-```js
-[RepositoryName]: [Name of your Project],
+```bash
+git remote add upstream https://github.com/Zemerik/ZemShowcase
 ```
 
-> [!Tip]
-> The `RepositoryName` can be found in the `projects.json` file which you edited in the previous step
+5. Create a new `branch` in which you can make your desired changes:
 
-5. **Save** the file and open a pull-request on this repository. Your PR will be **merged**/**reviewed** as soon as possible!
+```bash
+git checkout -b newproject
+```
 
-- > Don't Forget to Check out [ZemProfiles](https://github.com/Zemerik/ZemProfiles)
+6. Create a new folder in the `public/projects` directory with the name of your Project and upload the following:
+
+- Project Banner
+- Project Logo
+- Project Screenshot
+
+7. Head over to the `src/data/projects.ts` file and copy paste the code snippet below:
+
+```ts
+  {
+    url: 'Link to your Project',
+    id: '2',
+    banner: '/projects/[Project Name]/[Banner File]',
+    img: '/projects/[Project Name]/[Logo File]',
+    title: 'Name / Title of your Project',
+    type: 'Tech Stack',
+    icon: '/projects/[Project Name]/[Logo File]',
+    blog: 'Blog Link' // Leave blank if not valid,
+    github: 'Repository Link' // Leave blank if not valid,
+    web: 'Website Link' // Leave blank if not valid,
+    description:
+      "Project Description",
+    tags: [
+      {name: 'Tags / Keywords'},
+    ],
+  },
+  ```
+
+> [!Important]
+> Remember to fill in the Code Snippet with details of your Project
+
+8. Add all your files to the Staging Area now:
+
+```bash
+git add --all
+```
+
+9. Commit your Changes:
+
+```bash
+git commit -m "new Project: [Project Name]"
+```
+
+> [!Note]
+> Remember to have a good commit message!
+
+10. Push all your Changes:
+
+```bash
+git push origin newproject
+```
+
+11. Create a new Pull - Request on the Original Repository
+
+> Your Pull Request will be merged / reviewed as soon as possible
+
+- > Don't Forget to Check out [ZemProfiles](https://github.com/Zemerik/ZemProfiles) & [ZemPosts](https://github.com/Zemerik/ZemPosts)
 
 ## 🐞Bug/Issue/Feedback/Feature Request:
 
