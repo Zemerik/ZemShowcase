@@ -56,7 +56,6 @@ git checkout -b newproject
 
 - Project Banner
 - Project Logo
-- Project Screenshot
 
 7. Head over to the `src/data/projects.ts` file and copy paste the code snippet below:
 
@@ -69,9 +68,9 @@ git checkout -b newproject
     title: 'Name / Title of your Project',
     type: 'Tech Stack',
     icon: '/projects/[Project Name]/[Logo File]',
-    blog: 'Blog Link' // Leave blank if not valid,
-    github: 'Repository Link' // Leave blank if not valid,
-    web: 'Website Link' // Leave blank if not valid,
+    blog: 'Blog Link', // Leave blank if not valid,
+    github: 'Repository Link', // Leave blank if not valid,
+    web: 'Website Link', // Leave blank if not valid,
     description:
       "Project Description",
     tags: [
