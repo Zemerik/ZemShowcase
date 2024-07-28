@@ -19,7 +19,7 @@
 </p>
 
 <p align = "center">
-  <img src = "public/screenshot.png">
+  <img src = "public/Screenshot.png">
 </p>
 
 ## ❗ About:
@@ -53,7 +53,7 @@ ZemShowcase stands as an open-source platform, providing users with the opportun
     </td>
     <td>
 
-  <img src = "public/screenshot_phone.png" style = "height: 400px; width: 250px">
+  <img src = "public/Screenshot_phone.png" style = "height: 400px; width: 250px">
     </td>
   </tr>
   <tr>
