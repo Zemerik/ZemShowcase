@@ -24,6 +24,19 @@
 
 ## ➕ Adding your Project:
 
+### Automatically:
+
+> [!Note]
+> You can now submit your project to be added to the Showcase through an [Online Form](https://forms.visme.co/formsPlayer/8r1xydop-zemshowcase-project-submission) powered by [Visme](https://visme.com)!
+
+1. Click [here](https://forms.visme.co/formsPlayer/8r1xydop-zemshowcase-project-submission) to access the registration form
+2. Fill in the Form with the asked details
+3. Click `Register` to submit your Project. 
+
+> Your Project will be added as soon as possible
+
+### Manually:
+
 1. Fork a copy of this Repository on your Github account by clicking below,
 
 - [Fork](https://github.com/Zemerik/ZemShowcase/fork)
@@ -61,20 +74,20 @@ git checkout -b newproject
 
 ```ts
   {
-    url: 'Link to your Project',
-    id: '2',
-    banner: '/projects/[Project Name]/[Banner File]',
-    img: '/projects/[Project Name]/[Logo File]',
-    title: 'Name / Title of your Project',
-    type: 'Tech Stack',
-    icon: '/projects/[Project Name]/[Logo File]',
-    blog: 'Blog Link', // Leave blank if not valid,
-    github: 'Repository Link', // Leave blank if not valid,
-    web: 'Website Link', // Leave blank if not valid,
+    url: 'https://zemposts.vercel.app', // Link to your Project's Website
+    id: '2', // Don't Change
+    banner: '/projects/ZemPosts/banner.png', // Banner of your Project
+    img: '/projects/ZemPosts/logo.png', // Logo of your Project
+    title: 'ZemPosts', // Name or Title of your Project
+    type: 'Astro, Typescript, CSS', // Tech Stack your Project
+    icon: '/projects/ZemPosts/logo.png', // Logo of your Project
+    blog: 'https://zemerik.hashnode.dev/introducing-zemposts', // Link to your Project's Blog (OPTIONAL - Leave blank if not valid)
+    github: 'https://github.com/Zemerik/ZemPosts', // Link to your Project's Blog (OPTIONAL - Leave blank if not valid)
+    web: 'https://zemposts.vercel.app', // Link to your Project's Website (OPTIONAL - Leave blank if not valid)
     description:
-      "Project Description",
+      "ZemPosts stands as an ...", // Project Description (3 - 5 Sentences)
     tags: [
-      {name: 'Tags / Keywords'},
+      {name: 'Astro, ReactJS, Hemang Yadav, Open Source, ...'}, // Keywords / Tag related to your Project
     ],
   },
   ```
