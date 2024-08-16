@@ -1,23 +1,39 @@
+name: Greetings
 
-name: 'Greetings' 
-  
-on: 
-   fork: 
-   push: 
-     branches: [main] 
-   issues: 
-     types: [opened] 
-   pull_request_target: 
-     types: [opened] 
-  
-jobs: 
-   welcome: 
-     runs-on: ubuntu-latest 
-     steps: 
-       - uses: actions/checkout@v1 
-       - uses: EddieHubCommunity/gh-action-community/src/welcome@main 
-         with: 
-           github-token: ${{ secrets.GITHUB_TOKEN }} 
-           issue-message: 'Welcome, @${{ github.actor }}! Thanks for raising the issue!'
-           pr-message: 'Great job, @${{ github.actor }}! Thanks for creating the pull request!' 
-           footer: 'Soon the maintainers/owner will review it and provide you with feedback/suggestions. 👍 Rember to leave a ⭐!'
+on:
+  pull_request:
+    types: [opened]
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet on PRs and Issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              const isPR = context.payload.pull_request !== undefined;
+              const number = isPR ? context.payload.pull_request.number : context.payload.issue.number;
+              const commentBody = isPR
+                ? `Welcome, @${{ github.actor }}! Thanks for raising the issue!`
+                : `Great job, @${{ github.actor }}! Thanks for creating the pull request`;
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: number,
+                body: commentBody
+              });
+
+              console.log('Comment successfully created.');
+            } catch (error) {
+              console.error('Error creating comment:', error);
+              // Do not mark the step as failed; continue with the workflow.
+            }
