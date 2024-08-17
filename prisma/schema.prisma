@@ -19,12 +19,5 @@ model Project {
   github      String
   web         String
   description String
-  tags        Tag[]
-}
-
-model Tag {
-  id        Int      @id @default(autoincrement())
-  name      String
-  projectId Int
-  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  tags        String
 }
