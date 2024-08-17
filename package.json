@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker:compose": "docker-compose up -d"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
