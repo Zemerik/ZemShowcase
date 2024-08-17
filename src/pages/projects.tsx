@@ -89,7 +89,7 @@ export default function Projects() {
                     style={{ borderRadius: "20px" }}
                     width={500}
                     height={300}
-                    src={project.imgUrl}
+                    src={project.img}
                     alt={project.title}
                   />
                 </div>

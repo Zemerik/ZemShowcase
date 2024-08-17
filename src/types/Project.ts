@@ -25,7 +25,7 @@ export interface Print {
 export interface Project {
   icon: string
   banner: string
-  imgUrl: string
+  img: string
   id: string
   title: string
   description: string
