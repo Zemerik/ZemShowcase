@@ -1,0 +1,10 @@
+version: "3"
+services:
+  db:
+    image: postgres:latest # You can specify a version, e.g., postgres:13
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
