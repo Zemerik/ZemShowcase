@@ -15,6 +15,7 @@
     "@hookform/resolvers": "^3.1.0",
     "@mantine/core": "^7.4.1",
     "@mantine/styles": "^6.0.21",
+    "@prisma/client": "^5.18.0",
     "@types/react-ga": "^2.3.0",
     "@vercel/analytics": "^1.1.2",
     "axios": "^1.4.0",
