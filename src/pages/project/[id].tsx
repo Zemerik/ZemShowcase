@@ -20,14 +20,16 @@ import { useRouter } from "next/router";
 
 export default function Projeto() {
   const [project, setProject] = useState<Project | null>();
+  const [loading, setLoading] = useState<boolean>(true);
   const router = useRouter();
   const url = router.query.id;
   useEffect(() => {
-    const fetchData = async ()=>{
+    const fetchData = async () => {
       const data = await getProject(url);
-      setProject(data)
-    }
-    fetchData()
+      setProject(data);
+      setLoading(false);
+    };
+    fetchData();
   }, []);
   return project ? (
     <>
@@ -132,6 +134,8 @@ export default function Projeto() {
 
       <Footer />
     </>
+  ) : loading ? (
+    <p>Loading</p>
   ) : (
     <Error></Error>
   );
