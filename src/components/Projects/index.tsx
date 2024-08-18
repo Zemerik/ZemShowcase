@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import projects from '../../data/projects';
 import { AllBlogs } from './Blogs';
 import { ProjectsContainer, ProjectsContent, TagButton } from './styles';
 import { Container, Title } from '../../styles/styles';
 import { HiOutlineDesktopComputer } from 'react-icons/hi';
+import { getProjects } from '../../data/projects';
 
 interface Projects {
   slug: string;
@@ -15,9 +15,10 @@ interface Projects {
   img: string;
 }
 
-export function Projects() {
+export async function Projects() {
   const [selectedTags, setSelectedTags] = useState<string[]>(['All']);
-  const tags = ['All', ...new Set(projects.flatMap(project => project.tags.map(tag => tag.name)))];
+  const projects = await getProjects()
+  const tags = ['All', ...new Set(projects.flatMap((project: any) => project.tags))];
 
   /* For Multiple Selection
   const toggleTag = (tag: string) => {
