@@ -14,7 +14,7 @@ Modal.setAppElement('#__next');
 export function HomeHero() {
 
   function handleContinue() {
-    window.location.href = "https://github.com/Zemerik/ZemShowcase";
+    window.location.href = "/add";
   }
 
   return (
