@@ -14,10 +14,10 @@ import { ArrowLeft, ChatCenteredText } from 'phosphor-react';
 import { FaBlog, FaGithub } from 'react-icons/fa';
 import { BsGlobe } from 'react-icons/bs';
 import { getProjects } from '../../data/projects';
-import { Project as ProjectsProps } from '../../types/Project';
+import Error from '../404';
 
 interface ProjectProps {
-  project: Project;
+  project: Project | null;
 }
 
 export default function Projeto({ project }: ProjectProps) {
@@ -30,6 +30,10 @@ export default function Projeto({ project }: ProjectProps) {
     };
     fetchData();
   }, []);
+
+  if (!project) {
+    return <Error/>;
+  }
 
   return (
     <>
@@ -123,12 +127,12 @@ export default function Projeto({ project }: ProjectProps) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const projects:ProjectsProps[] = await getProjects();
-  const project = projects.find((project) => project.url === params?.id);
+  const projects: Project[] = await getProjects();
+  const project = projects.find((project) => project.url === params?.id) || null;
 
   return {
     props: {
-      project: project? project : null,
+      project,
     },
     revalidate: 10,
     
@@ -137,7 +141,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const projects:ProjectsProps[] = await getProjects();
+  const projects: Project[] = await getProjects();
   const paths = projects.map((project) => ({
     params: { id: project.url },
   }));
