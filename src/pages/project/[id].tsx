@@ -21,16 +21,6 @@ interface ProjectProps {
 }
 
 export default function Projeto({ project }: ProjectProps) {
-  const [projects, setProjects] = useState<Project[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const p = await getProjects();
-      setProjects(p);
-    };
-    fetchData();
-  }, []);
-
   if (!project) {
     return <Error/>;
   }
