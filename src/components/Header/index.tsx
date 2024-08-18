@@ -45,7 +45,7 @@ export function Header() {
 
       <NavMenu onClick={handleOpen} open={open}>
         <ul>
-          <li>
+          <li key={0}>
             <Link href={'/'}>
 
               <span>Home</span>
@@ -53,7 +53,7 @@ export function Header() {
             </Link>
           </li>
 
-          <li>
+          <li key={1}>
             <Link href={'/projects'}>
 
               <span>Projects</span>
@@ -61,7 +61,7 @@ export function Header() {
             </Link>
           </li>
 
-          <li>
+          <li key={3}>
             <Link href={'/contact'}>
 
               <span>Contact</span>
