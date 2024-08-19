@@ -78,6 +78,7 @@ export default function Contacts() {
                   onChange={handleChange}
                   required
                   className="form-input"
+                  style={{resize:'none'}}
                   rows={4}
                 />
               ) : (
