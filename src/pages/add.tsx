@@ -53,13 +53,16 @@ export default function Contacts() {
       })
 
       if (response.ok) {
-        console.log('Form submitted successfully')
-        // Optionally reset form or show a success message
+        alert("Your project has been added!")
       } else {
+        alert("An error has occurred. Please try again later")
         console.log('Form submission error')
       }
     } catch (error) {
+      alert("An error has occurred. Please try again later")
       console.error('An error occurred:', error)
+    }finally{
+      location.reload()
     }
   }
 
