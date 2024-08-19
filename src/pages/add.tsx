@@ -78,9 +78,9 @@ export default function Contacts() {
         <h1 className="form-title">Add New Project</h1>
         <form onSubmit={handleSubmit} className="form">
           {[
+            { name: 'title', label: 'Title', type: 'text' },
             { name: 'banner', label: 'Banner URL', type: 'text' },
             { name: 'img', label: 'Image URL', type: 'text' },
-            { name: 'title', label: 'Title', type: 'text' },
             { name: 'type', label: 'Type', type: 'text' },
             { name: 'icon', label: 'Icon URL', type: 'text' },
             { name: 'blog', label: 'Blog URL', type: 'text' },
