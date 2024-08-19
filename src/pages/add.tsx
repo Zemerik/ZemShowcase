@@ -4,7 +4,6 @@ import { ScrollTop } from '../components/ScrollTop'
 import { useState, ChangeEvent, FormEvent } from 'react'
 
 interface FormData {
-  url: string
   banner: string
   img: string
   title: string
@@ -21,7 +20,6 @@ type FormField = keyof FormData
 
 export default function Contacts() {
   const [formData, setFormData] = useState<FormData>({
-    url: '',
     banner: '',
     img: '',
     title: '',
@@ -80,7 +78,6 @@ export default function Contacts() {
         <h1 className="form-title">Add New Project</h1>
         <form onSubmit={handleSubmit} className="form">
           {[
-            { name: 'url', label: 'URL', type: 'text' },
             { name: 'banner', label: 'Banner URL', type: 'text' },
             { name: 'img', label: 'Image URL', type: 'text' },
             { name: 'title', label: 'Title', type: 'text' },
