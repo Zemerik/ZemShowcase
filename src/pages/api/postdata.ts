@@ -12,7 +12,12 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   if (req.method === 'POST') {
-    const { url, banner, img, title, type, icon, blog, github, web, description, tags } = req.body
+    const { banner, img, title, type, icon, blog, github, web, description, tags } = req.body;
+
+    // Generate a unique URL by combining the title with a timestamp and a random number
+    const timestamp = Date.now(); // Current timestamp in milliseconds
+    const randomSuffix = Math.floor(Math.random() * 10000); // Random number between 0 and 9999
+    const url = `${title.toLowerCase().replace(/\s+/g, '-')}-${timestamp}-${randomSuffix}`;
 
     try {
       const newProject = await prisma.project.create({
