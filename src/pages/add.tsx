@@ -4,28 +4,34 @@ import { ScrollTop } from '../components/ScrollTop'
 import { useState, ChangeEvent, FormEvent } from 'react'
 
 interface FormData {
-  title: string
+  url: string
   banner: string
   img: string
+  title: string
+  type: string
   icon: string
   blog: string
   github: string
   web: string
   description: string
+  tags: string
 }
 
 type FormField = keyof FormData
 
 export default function Contacts() {
   const [formData, setFormData] = useState<FormData>({
-    title: '',
+    url: '',
     banner: '',
     img: '',
+    title: '',
+    type: '',
     icon: '',
     blog: '',
     github: '',
     web: '',
     description: '',
+    tags: '',
   })
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -36,6 +42,28 @@ export default function Contacts() {
     } as Pick<FormData, keyof FormData>)
   }
 
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+
+    try {
+      const response = await fetch('/api/postdata', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        console.log('Form submitted successfully')
+        // Optionally reset form or show a success message
+      } else {
+        console.log('Form submission error')
+      }
+    } catch (error) {
+      console.error('An error occurred:', error)
+    }
+  }
 
   return (
     <>
@@ -50,16 +78,19 @@ export default function Contacts() {
 
       <main className="form-container">
         <h1 className="form-title">Add New Project</h1>
-        <form action='/api/postData' className="form">
+        <form onSubmit={handleSubmit} className="form">
           {[
+            { name: 'url', label: 'URL', type: 'text' },
+            { name: 'banner', label: 'Banner URL', type: 'text' },
+            { name: 'img', label: 'Image URL', type: 'text' },
             { name: 'title', label: 'Title', type: 'text' },
-            { name: 'banner', label: 'Banner URL', type: 'url' },
-            { name: 'img', label: 'Image URL', type: 'url' },
-            { name: 'icon', label: 'Icon URL', type: 'url' },
-            { name: 'blog', label: 'Blog URL', type: 'url' },
-            { name: 'github', label: 'GitHub URL', type: 'url' },
-            { name: 'web', label: 'Website URL', type: 'url' },
+            { name: 'type', label: 'Type', type: 'text' },
+            { name: 'icon', label: 'Icon URL', type: 'text' },
+            { name: 'blog', label: 'Blog URL', type: 'text' },
+            { name: 'github', label: 'GitHub URL', type: 'text' },
+            { name: 'web', label: 'Website URL', type: 'text' },
             { name: 'description', label: 'Description', type: 'textarea' },
+            { name: 'tags', label: 'Tags', type: 'text' },
           ].map((field) => (
             <div key={field.name} className="form-field">
               <label htmlFor={field.name} className="form-label">
@@ -73,7 +104,6 @@ export default function Contacts() {
                   onChange={handleChange}
                   required
                   className="form-input"
-                  style={{resize:'none'}}
                   rows={4}
                 />
               ) : (
