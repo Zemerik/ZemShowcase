@@ -36,11 +36,6 @@ export default function Contacts() {
     } as Pick<FormData, keyof FormData>)
   }
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault()
-    // Add form submission logic here
-    console.log('Form submitted:', formData)
-  }
 
   return (
     <>
@@ -55,7 +50,7 @@ export default function Contacts() {
 
       <main className="form-container">
         <h1 className="form-title">Add New Project</h1>
-        <form onSubmit={handleSubmit} className="form">
+        <form action='/api/postData' className="form">
           {[
             { name: 'title', label: 'Title', type: 'text' },
             { name: 'banner', label: 'Banner URL', type: 'url' },
