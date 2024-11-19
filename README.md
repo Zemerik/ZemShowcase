@@ -22,6 +22,8 @@
   <img src = "public/Screenshot.png">
 </p>
 
+![Wakatime](https://wakatime.com/badge/user/9860690e-8928-4746-844c-c2924f121f2d/project/48e7bd72-1c5d-4e3a-9fa3-e9bc6ef3e390.svg)
+
 ## ❗ About:
 
 ZemShowcase stands as an open-source platform, providing users with the opportunity to exhibit their projects seamlessly to fellow developers. This exhibition is fostered through the simple act of adding one's Project to the platform, thus creating a digital hub where like-minded individuals can engage, collaborate, and share insights within the expansive realm of software development. With its user-friendly interface and inclusive community ethos, ZemShowcase serves as a dynamic space where projects are highlighted, ideas are exchanged, and innovation thrives.
